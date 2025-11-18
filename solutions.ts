@@ -1,4 +1,3 @@
-/* 1. formatValue function problem */
 const formatValue = (
   input: string | number | boolean
 ): string | number | boolean => {
@@ -12,7 +11,7 @@ const formatValue = (
   return input;
 };
 
-/* 2. getLength function problem */
+
 const getLength = (value: string | any[]): number => {
   if (Array.isArray(value)) {
     return value.length;
@@ -23,7 +22,7 @@ const getLength = (value: string | any[]): number => {
   }
 };
 
-/* 3. problem */
+
 class Person {
   public name: string;
   public age: number;
@@ -38,14 +37,15 @@ class Person {
   }
 }
 
-/* 4. filterByRating function problem */
+
+
 type itemsType = Array<{ title: string; rating: number }>;
 
 const filterByRating = (books: itemsType): itemsType => {
   return books.filter((item) => item.rating >= 4);
 };
 
-/* 5. filterActiveUsers function problem */
+
 
 type userType = Array<{
   id: number;
@@ -58,7 +58,8 @@ const filterActiveUsers = (users: userType): userType => {
   return users.filter((user) => user.isActive === true);
 };
 
-/* 6. printBookDetails function problem */
+
+
 interface Book{
   title:string;
   author:string;
@@ -75,7 +76,8 @@ const printBookDetails =(book:Book)=>{
   )
 }
 
-/* 7. getUniqueValues function problem */
+
+
 const getUniqueValues = (arr1: number[], arr2: number[]): number[] => {
   const uniqueArray: number[] = [];
   for (let i = 0; i < arr1.length; i++) {
@@ -92,7 +94,7 @@ const getUniqueValues = (arr1: number[], arr2: number[]): number[] => {
 };
 
 
-/* 8. calculateTotalPrice function problem */
+
 interface Product {
   name: string;
   price: number;
