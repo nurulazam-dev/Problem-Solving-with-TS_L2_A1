@@ -63,6 +63,20 @@ const printBookDetails =(book:Book)=>{
 }
 
 /* 7. getUniqueValues function problem */
+const getUniqueValues = (arr1: number[], arr2: number[]): number[] => {
+  const uniqueArray: number[] = [];
+  for (let i = 0; i < arr1.length; i++) {
+    if (uniqueArray.indexOf(arr1[i]) === -1) {
+      uniqueArray.push(arr1[i]);
+    }
+  }
+  for (let i = 0; i < arr2.length; i++) {
+    if (uniqueArray.indexOf(arr2[i]) === -1) {
+      uniqueArray.push(arr2[i]);
+    }
+  }
+  return uniqueArray;
+};
 
 
 /* 8. calculateTotalPrice function problem */
