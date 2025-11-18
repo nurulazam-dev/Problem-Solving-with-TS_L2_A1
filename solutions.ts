@@ -32,11 +32,6 @@ const filterByRating = (books: itemsType): itemsType => {
 };
 
 /* 5. filterActiveUsers function problem */
-const users = [
-  { id: 1, name: "Rakib", email: "rakib@example.com", isActive: true },
-  { id: 2, name: "Asha", email: "asha@example.com", isActive: false },
-  { id: 3, name: "Rumi", email: "rumi@example.com", isActive: true },
-];
 
 type userType = Array<{
   id: number;
@@ -49,8 +44,30 @@ const filterActiveUsers = (users: userType): userType => {
   return users.filter((user) => user.isActive === true);
 };
 
-console.log(filterActiveUsers(users));
-
 /* 6. printBookDetails function problem */
+interface Book{
+  title:string;
+  author:string;
+  publishedYear: number;
+  isAvailable: boolean;
+}
+
+const printBookDetails =(book:Book)=>{
+  return console.log(
+    `Title: ${book.title}, 
+    Author: ${book.author}, 
+    Published: ${book.publishedYear}, 
+    Available: ${book.isAvailable}`
+  )
+}
+
+const myBook: Book = {
+  title: "The Great Gatsby",
+  author: "F. Scott Fitzgerald",
+  publishedYear: 1925,
+  isAvailable: true,
+};
+
+printBookDetails(myBook);
 /* 7. getUniqueValues function problem */
 /* 8. calculateTotalPrice function problem */
