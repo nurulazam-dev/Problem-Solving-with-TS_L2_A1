@@ -24,6 +24,7 @@ const getLength = (value: string | any[]): number => {
 };
 
 /* 3. problem */
+
 /* 4. filterByRating function problem */
 type itemsType = Array<{ title: string; rating: number }>;
 
@@ -61,13 +62,21 @@ const printBookDetails =(book:Book)=>{
   )
 }
 
-const myBook: Book = {
-  title: "The Great Gatsby",
-  author: "F. Scott Fitzgerald",
-  publishedYear: 1925,
-  isAvailable: true,
-};
-
-printBookDetails(myBook);
 /* 7. getUniqueValues function problem */
+
+
 /* 8. calculateTotalPrice function problem */
+interface Product {
+  name: string;
+  price: number;
+  quantity: number;
+  discount?: number;
+}
+
+const calculateTotalPrice =(products:Product[])=>{
+const totalProductPrice=products.reduce((price: number, product: Product) => {
+    price += product.price * product.quantity;
+    return price;
+  }, 0);
+return totalProductPrice;
+}
