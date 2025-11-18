@@ -22,11 +22,21 @@ const getLength = (value: string | any[]): number => {
     return value;
   }
 };
-console.log(getLength("This is a test"));
-console.log(getLength([10, 20, 30, 40]));
 
 /* 3. problem */
 /* 4. filterByRating function problem */
+const books = [
+  { title: "Book A", rating: 4.5 },
+  { title: "Book B", rating: 3.2 },
+  { title: "Book C", rating: 5.0 },
+];
+type itemsType = Array<{ title: string; rating: number }>;
+
+const filterByRating = (books: itemsType): itemsType => {
+  return books.filter((item) => item.rating >= 4);
+};
+console.log(filterByRating(books));
+
 /* 5. filterActiveUsers function problem */
 /* 6. printBookDetails function problem */
 /* 7. getUniqueValues function problem */
