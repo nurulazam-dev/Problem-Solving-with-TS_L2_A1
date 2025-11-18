@@ -4,4 +4,11 @@
 
 2. What is the use of the keyof keyword in TypeScript? Provide an example.
 
-   > TypeScript এ keyof keyword ব্যবহার করা হয়
+   > সাধারণত TypeScript এ `keyof` keyword ব্যবহার করা হয় কোন object type এর সব প্রপার্টির নামগুলোকে একটি union টাইপ হিসেবে পাওযার জন্য। এটি মূলত টাইপ-সেফ প্রপার্টি access ও generic ফাংশনে ভুল key ব্যবহার থেকে আমাদের রক্ষা করে।
+   > For Example:
+```bash
+type User = {id: number; name:string; active: boolean;}
+
+type UserKeys = keyof User
+```
+> Output: "id" | "name" | "active"
